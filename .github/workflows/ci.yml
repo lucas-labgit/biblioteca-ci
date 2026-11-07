@@ -27,7 +27,7 @@ jobs:
        - run: docker run -d -name biblioteca-ci -p 8000:8000 biblioteca-ci:lastest
        - run: sleep 10
        - run: curl -fsS http://localhost:8000/saude; then exit 0
-    publicar:
+  publicar:
       need: imagem
       runs-on: ubuntu-latest
       permissions:
